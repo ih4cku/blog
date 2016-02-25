@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ## for client-side less
+  <link rel="stylesheet/less" type="text/css" href="http://neurocoder.me/theme/css/style.less">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+  -->
+  <link rel="stylesheet" type="text/css" href="http://neurocoder.me/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="http://neurocoder.me/theme/css/pygments.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="neurocoder">
+  <meta name="description" content="Posts and writings by neurocoder">
+
+  <link href="http://neurocoder.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="neurocoder's notes Atom" />
+
+<meta name="keywords" content="git">
+
+  <title>
+    neurocoder's notes
+&ndash; git index meet merging conflict  </title>
+
+</head>
+
+<body>
+  <aside>
+    <div id="user_meta">
+      <a href="http://neurocoder.me">
+        <img src="/favicon.ico" alt="logo">
+      </a>
+      <h2><a href="http://neurocoder.me">neurocoder</a></h2>
+      <p>Record my thoughts</p>
+      <ul>
+        <li><a href="categories.html">categories</a></li>
+        <li><a href="tags.html">tags</a></li>
+        <li><a href="http://neurocoder.me/pages/about.html">about</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <p>
+      <a href="http://neurocoder.me">Index</a> &brvbar; <a href="http://neurocoder.me/posts/index.html">Archives</a>
+      &brvbar; <a href="http://neurocoder.me/feeds/all.atom.xml">Atom</a>
+      </p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h3><a href="http://neurocoder.me/posts/2016/02/git-index-conflict.html">git index meet merging conflict</a></h3>
+  </div>
+  <div class="article_text">
+    <p>The content of <code>index</code> when merging conflict happened:</p>
+<div class="highlight"><pre><span class="nv">$ </span>git ls-files -s
+100644 ce013625030ba8dba906f756967f9e9ca394464a 1       a.txt
+100644 94954abda49de8615a048f8d2e64b5de848e27a1 2       a.txt
+100644 e9f71396d33d1553ccd46186d4c11363b6841f6f 3       a.txt
+
+<span class="nv">$ </span>git cat-file -p ce013625030ba8dba906f756967f9e9ca394464a <span class="c"># :1:a.txt</span>
+hello
+
+<span class="nv">$ </span>git cat-file -p 94954abda49de8615a048f8d2e64b5de848e27a1 <span class="c"># :2:a.txt</span>
+hello
+world
+
+<span class="nv">$ </span>git cat-file -p e9f71396d33d1553ccd46186d4c11363b6841f6f <span class="c"># :3:a.txt</span>
+hello
+neurocoder
+</pre></div>
+
+
+<p>After solving the conflict, the file is added to <code>:0:a.txt</code> in <code>index</code>.</p>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: 2016-02-25 Thu</p>
+    <p>Category: <a href="http://neurocoder.me/category/programming.html">programming</a>
+ &ndash; Tags:
+      <a href="http://neurocoder.me/tag/git.html">git</a>    </p>
+  </div>
+
+  <div id="article_comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_identifier = "posts/2016/02/git-index-conflict.html";
+        (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = '//neurocoder.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+    </script>
+  </div>
+
+</article>
+
+
+    <div id="ending_message">
+      <p>&copy; neurocoder. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
+    </div>
+  </main>
+</body>
+</html>

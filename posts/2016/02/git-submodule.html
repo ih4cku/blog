@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ## for client-side less
+  <link rel="stylesheet/less" type="text/css" href="http://neurocoder.me/theme/css/style.less">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+  -->
+  <link rel="stylesheet" type="text/css" href="http://neurocoder.me/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="http://neurocoder.me/theme/css/pygments.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="neurocoder">
+  <meta name="description" content="Posts and writings by neurocoder">
+
+  <link href="http://neurocoder.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="neurocoder's notes Atom" />
+
+<meta name="keywords" content="git">
+
+  <title>
+    neurocoder's notes
+&ndash; git submodule  </title>
+
+</head>
+
+<body>
+  <aside>
+    <div id="user_meta">
+      <a href="http://neurocoder.me">
+        <img src="/favicon.ico" alt="logo">
+      </a>
+      <h2><a href="http://neurocoder.me">neurocoder</a></h2>
+      <p>Record my thoughts</p>
+      <ul>
+        <li><a href="categories.html">categories</a></li>
+        <li><a href="tags.html">tags</a></li>
+        <li><a href="http://neurocoder.me/pages/about.html">about</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <p>
+      <a href="http://neurocoder.me">Index</a> &brvbar; <a href="http://neurocoder.me/posts/index.html">Archives</a>
+      &brvbar; <a href="http://neurocoder.me/feeds/all.atom.xml">Atom</a>
+      </p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h3><a href="http://neurocoder.me/posts/2016/02/git-submodule.html">git submodule</a></h3>
+  </div>
+  <div class="article_text">
+    <p>Using third-party libraries is very common in daily development.
+Git submodule is cool to make the library related with its original remote repo.</p>
+<p>When cloning or pulling a repo containing submodules, these will not be checkout out by default (except for using <code>--recursive</code> option). The <code>init</code> and <code>update</code> command will maintain submodules with appropriate revision.</p>
+<p>The main repo record a <code>gitlink</code> tree entry in the commit and use that to indicate the revision record of the submodules when checking out.</p>
+<p>A record file named <code>.gitmodules</code> is saved at the root of the source tree assigning a logical name of the submodule and the URL the submodule shall be cloned from.</p>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: 2016-02-25 Thu</p>
+    <p>Category: <a href="http://neurocoder.me/category/programming.html">programming</a>
+ &ndash; Tags:
+      <a href="http://neurocoder.me/tag/git.html">git</a>    </p>
+  </div>
+
+  <div id="article_comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_identifier = "posts/2016/02/git-submodule.html";
+        (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = '//neurocoder.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+    </script>
+  </div>
+
+</article>
+
+
+    <div id="ending_message">
+      <p>&copy; neurocoder. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
+    </div>
+  </main>
+</body>
+</html>

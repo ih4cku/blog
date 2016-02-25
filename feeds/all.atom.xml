@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>neurocoder's notes</title><link href="http://neurocoder.me/" rel="alternate"></link><link href="http://neurocoder.me/feeds/all.atom.xml" rel="self"></link><id>http://neurocoder.me/</id><updated>2016-02-25T15:13:49+08:00</updated><entry><title>My bloging pipeline</title><link href="http://neurocoder.me/posts/2016/02/blogging-pipeline.html" rel="alternate"></link><updated>2016-02-25T15:13:49+08:00</updated><author><name>neurocoder</name></author><id>tag:neurocoder.me,2016-02-25:posts/2016/02/blogging-pipeline.html</id><summary type="html">&lt;ol&gt;
+&lt;li&gt;write posts&lt;/li&gt;
+&lt;li&gt;local test&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;make html &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; make serve
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;commit modification&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git add .
+&lt;span class="nv"&gt;$ &lt;/span&gt;git commit -m &lt;span class="s1"&gt;&amp;#39;new post&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;push to github&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;make github
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="pelican"></category></entry><entry><title>git submodule</title><link href="http://neurocoder.me/posts/2016/02/git-submodule.html" rel="alternate"></link><updated>2016-02-25T14:57:08+08:00</updated><author><name>neurocoder</name></author><id>tag:neurocoder.me,2016-02-25:posts/2016/02/git-submodule.html</id><summary type="html">&lt;p&gt;Using third-party libraries is very common in daily development.
+Git submodule is cool to make the library related with its original remote repo.&lt;/p&gt;
+&lt;p&gt;When cloning or pulling a repo containing submodules, these will not be checkout out by default (except for using &lt;code&gt;--recursive&lt;/code&gt; option). The &lt;code&gt;init&lt;/code&gt; and &lt;code&gt;update&lt;/code&gt; command will maintain submodules with appropriate revision.&lt;/p&gt;
+&lt;p&gt;The main repo record a &lt;code&gt;gitlink&lt;/code&gt; tree entry in the commit and use that to indicate the revision record of the submodules when checking out.&lt;/p&gt;
+&lt;p&gt;A record file named &lt;code&gt;.gitmodules&lt;/code&gt; is saved at the root of the source tree assigning a logical name of the submodule and the URL the submodule shall be cloned from.&lt;/p&gt;</summary><category term="git"></category></entry><entry><title>git index meet merging conflict</title><link href="http://neurocoder.me/posts/2016/02/git-index-conflict.html" rel="alternate"></link><updated>2016-02-25T12:31:06+08:00</updated><author><name>neurocoder</name></author><id>tag:neurocoder.me,2016-02-25:posts/2016/02/git-index-conflict.html</id><summary type="html">&lt;p&gt;The content of &lt;code&gt;index&lt;/code&gt; when merging conflict happened:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git ls-files -s
+100644 ce013625030ba8dba906f756967f9e9ca394464a 1       a.txt
+100644 94954abda49de8615a048f8d2e64b5de848e27a1 2       a.txt
+100644 e9f71396d33d1553ccd46186d4c11363b6841f6f 3       a.txt
+
+&lt;span class="nv"&gt;$ &lt;/span&gt;git cat-file -p ce013625030ba8dba906f756967f9e9ca394464a &lt;span class="c"&gt;# :1:a.txt&lt;/span&gt;
+hello
+
+&lt;span class="nv"&gt;$ &lt;/span&gt;git cat-file -p 94954abda49de8615a048f8d2e64b5de848e27a1 &lt;span class="c"&gt;# :2:a.txt&lt;/span&gt;
+hello
+world
+
+&lt;span class="nv"&gt;$ &lt;/span&gt;git cat-file -p e9f71396d33d1553ccd46186d4c11363b6841f6f &lt;span class="c"&gt;# :3:a.txt&lt;/span&gt;
+hello
+neurocoder
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After solving the conflict, the file is added to &lt;code&gt;:0:a.txt&lt;/code&gt; in &lt;code&gt;index&lt;/code&gt;.&lt;/p&gt;</summary><category term="git"></category></entry><entry><title>git remote notes</title><link href="http://neurocoder.me/posts/2016/02/git-remote.html" rel="alternate"></link><updated>2016-02-24T14:51:31+08:00</updated><author><name>neurocoder</name></author><id>tag:neurocoder.me,2016-02-24:posts/2016/02/git-remote.html</id><summary type="html">&lt;h1&gt;questions&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Q: What is a &lt;code&gt;local tracking branch&lt;/code&gt;?&lt;ul&gt;
+&lt;li&gt;A: When merging new commits of a &lt;code&gt;remote tracking branch&lt;/code&gt;, it merges to the &lt;code&gt;local tracking branch&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Q: Which branches does &lt;code&gt;git fetch&lt;/code&gt; fetch?&lt;/li&gt;
+&lt;li&gt;Q: How is file system &lt;code&gt;rm&lt;/code&gt; different with &lt;code&gt;git rm&lt;/code&gt;?&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git rm&lt;/code&gt; removes a file from both the repo and the working directory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Q: How is the order of &lt;em&gt;parent commit&lt;/em&gt; determined?&lt;/li&gt;
+&lt;li&gt;Q: When merge conflict happened, how does git record I am merging?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;relative git commit names&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;^&lt;/code&gt; means a commit ahead&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;^2&lt;/code&gt; means the 2nd parent commit of the commit ahead&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="git"></category></entry><entry><title>Blogging with Pelican</title><link href="http://neurocoder.me/posts/2016/02/pelican.html" rel="alternate"></link><updated>2016-02-24T13:54:41+08:00</updated><author><name>neurocoder</name></author><id>tag:neurocoder.me,2016-02-24:posts/2016/02/pelican.html</id><summary type="html">&lt;p&gt;I've red the whole document of Pelican and now I'm aware of the usage and mechanism of Pelican.&lt;/p&gt;
+&lt;p&gt;Next step, I will add plug-ins and use a more good looking theme for my blog.&lt;/p&gt;</summary><category term="pelican"></category></entry><entry><title>Rule of Three (or The Big Three)</title><link href="http://neurocoder.me/posts/2016/02/rule-of-three.html" rel="alternate"></link><updated>2016-02-23T13:54:59+08:00</updated><author><name>neurocoder</name></author><id>tag:neurocoder.me,2016-02-23:posts/2016/02/rule-of-three.html</id><summary type="html">&lt;p&gt;The term The Rule of Three was &lt;a href="https://blog.feabhas.com/2014/12/the-rule-of-the-big-three-and-a-half-resource-management-in-c"&gt;coined&lt;/a&gt; by Marshall Cline in 1991.&lt;/p&gt;
+&lt;h1&gt;References&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)"&gt;Rule of three (C++ programming)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.florianwolters.de/educational/2015/01/31/The_Rule_of_Zero/"&gt;The Rule of Zero&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.drdobbs.com/c-made-easier-the-rule-of-three/184401400"&gt;C++ Made Easier: The Rule of Three&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/4172722/what-is-the-rule-of-three"&gt;What is The Rule of Three?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="c++"></category></entry><entry><title>PIMPL</title><link href="http://neurocoder.me/posts/2016/02/pimpl.html" rel="alternate"></link><updated>2016-02-23T13:54:54+08:00</updated><author><name>neurocoder</name></author><id>tag:neurocoder.me,2016-02-23:posts/2016/02/pimpl.html</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://oliora.github.io/2015/12/29/pimpl-and-rule-of-zero.html"&gt;PIMPL, Rule of Zero and Scott Meyers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="c++"></category></entry></feed>

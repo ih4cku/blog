@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>neurocoder's notes</title><link href="http://neurocoder.me/" rel="alternate"></link><link href="http://neurocoder.me/feeds/misc.atom.xml" rel="self"></link><id>http://neurocoder.me/</id><updated>2016-02-25T15:13:49+08:00</updated><entry><title>My bloging pipeline</title><link href="http://neurocoder.me/posts/2016/02/blogging-pipeline.html" rel="alternate"></link><updated>2016-02-25T15:13:49+08:00</updated><author><name>neurocoder</name></author><id>tag:neurocoder.me,2016-02-25:posts/2016/02/blogging-pipeline.html</id><summary type="html">&lt;ol&gt;
+&lt;li&gt;write posts&lt;/li&gt;
+&lt;li&gt;local test&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;make html &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; make serve
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;commit modification&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git add .
+&lt;span class="nv"&gt;$ &lt;/span&gt;git commit -m &lt;span class="s1"&gt;&amp;#39;new post&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;push to github&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;make github
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="pelican"></category></entry><entry><title>Blogging with Pelican</title><link href="http://neurocoder.me/posts/2016/02/pelican.html" rel="alternate"></link><updated>2016-02-24T13:54:41+08:00</updated><author><name>neurocoder</name></author><id>tag:neurocoder.me,2016-02-24:posts/2016/02/pelican.html</id><summary type="html">&lt;p&gt;I've red the whole document of Pelican and now I'm aware of the usage and mechanism of Pelican.&lt;/p&gt;
+&lt;p&gt;Next step, I will add plug-ins and use a more good looking theme for my blog.&lt;/p&gt;</summary><category term="pelican"></category></entry></feed>
