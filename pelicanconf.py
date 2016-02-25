@@ -22,6 +22,8 @@ AUTHOR_FEED_RSS = None
 DEFAULT_PAGINATION = 10
 
 THEME = 'themes/svbhack'
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['render_math']
 
 LOCALE = "C"
 DEFAULT_DATE = 'fs'
