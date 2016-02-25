@@ -1,7 +1,8 @@
-title: git index
+title: git index meet merging conflict
 date: 2016-02-25 12:31:06
+tags: git
 
-Show `index` when merging conflict happened.
+The content of `index` when merging conflict happened:
 
 ```bash
 $ git ls-files -s
@@ -20,3 +21,4 @@ $ git cat-file -p e9f71396d33d1553ccd46186d4c11363b6841f6f # :3:a.txt
 hello
 neurocoder
 ```
+After solving the conflict, the file is added to `:0:a.txt` in `index`.
