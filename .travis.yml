@@ -5,6 +5,7 @@ branches:
 install:
   - pip install pelican ghp-import Markdown
 script:
+  - cat .git/config
   - make github
 env:
   global:
