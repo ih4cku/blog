@@ -5,8 +5,8 @@ branches:
 install:
   - pip install pelican ghp-import Markdown
 script:
-  - cat .git/config
   - make github
+  - git push -fq https://${GH_TOKEN}@${GH_REF} $(GITHUB_PAGES_BRANCH)
 env:
   global:
     - secure: "qCJabVvaaYZ2nYRNabULBYZmSUQ1bguT5y3uUdOBXuVJ9wBNvEAKO/Rlqhr4j0IO/O2AAfuTy/BrTwBfR8NhQg+EDMMlU2uAVuRhF/7gFfaBuIslHXQbpEO6Jrh9H5gKmsSI/VTPiKmYHxYktnsf3prU7i70QEvvh7ABkC3wMCPzgp9NVpAA2+XlFsuZYWiMDDfcvskY3Un272ZlWI76GkOigEvLt9Z7yqzEV+4YX1o5Zb/VGlnhMiBKxA2Z5gk0grp9afl2Zd9tpGNKQ1m7GkXE5tJGiMZ++ZIVjh9eLysMBeKV/RyU8w40AVKRr2yfmYaSzULfrI6ScbMnkCdGSUyziedCBSIkC/znBJveIDTGRDBGIP3WY/mX0IpSbCWYKo8IOq/8y5Unx2ulYvhzivCPGcZQUeCNBJrjY1GojL9jhzWtWws5LYB//I0DDU5RbdYyKCR5a32L0/6VlkDubFBVBAyuE6lIuDCnSgtD+1hPAGmscoXXUKGLVFwlpFdGE/JEuFDCUS7TIuj7fibieshjaNZwm2spnn6txMJhZ1Dy59zoc/IsULeN8b5wXdtr6t0YTQ0izIb97brF6He2HcBLjkAr+nE4lEQotQON6J640h/NsG3Cqaf5B+76yqVYQK9uJqtoKP7sfbnYn5/j78m2lrytSC/pKEb4DCcwnX8="
