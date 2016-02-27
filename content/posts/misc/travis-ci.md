@@ -30,3 +30,11 @@ Skipping the install step: `install: true`
 - Environment variables can be accessed from any stage of the building process.
 - Can be set in `.travis.yml` or web UI
 - Can be encrypted with `travis encrypt MY_SECURE_ENV=<secure_value>` and put into `.travis.yml` after `secure:`
+
+# references
+
+- [Travis-CI Environment Variables](https://docs.travis-ci.com/user/environment-variables/)
+- [Auto-deploying built products to gh-pages with Travis](https://gist.github.com/domenic/ec8b0fc8ab45f39403dd)
+- [Publish your Pelican blog on Github pages via Travis-CI](http://blog.mathieu-leplatre.info/publish-your-pelican-blog-on-github-pages-via-travis-ci.html)
+- [用 Travis-CI 生成 Github Pages 博客](https://farseerfc.me/travis-push-to-github-pages-blog.html)
+
