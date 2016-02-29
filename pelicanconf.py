@@ -42,8 +42,8 @@ EXTRA_PATH_METADATA = {
 USER_LOGO_URL = '/favicon.ico'
 TAGLINE = 'Record my thoughts'
 ARTICLE_PATHS = ['posts']
-MENUITEMS = [('categories', 'categories.html'),
-             ('tags', 'tags.html')]
+MENUITEMS = [('categories', '/categories.html'),
+             ('tags', '/tags.html')]
 DIRECT_TEMPLATES = ['index', 'categories', 'archives', 'tags']   
 
 ARTICLE_URL             = 'posts/{date:%Y}/{date:%m}/{slug}.html'
