@@ -28,7 +28,7 @@ tags: c++
         * after transferring, the original owner becomes `nullptr`
 
 ### references
-- [EECS 381 - Object-Oriented and Advanced Programming - Winter 2016](http://www.umich.edu/~eecs381/)
+- [R: Resource management - C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)
 - [Using C++11's Smart Pointers](http://www.umich.edu/~eecs381/handouts/C++11_smart_ptrs.pdf)
 - [C++11: unique_ptr](http://www.drdobbs.com/cpp/c11-uniqueptr/240002708)
 - [Unique and shared ownership](https://akrzemi1.wordpress.com/2011/06/27/unique-ownership-shared-ownership/)
