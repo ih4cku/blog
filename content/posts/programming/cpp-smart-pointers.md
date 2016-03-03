@@ -8,6 +8,7 @@ tags: c++
 - cycle problem
 
 # `weak_ptr`
+- advantage over a regular raw pointer is that you can safely tell whether `weak_ptr` is dangling or not
 - just observe the object, doesn't affect the lifetime
 - can only be created from a `shared_ptr` or another `weak_ptr`
 - can't dereference 
