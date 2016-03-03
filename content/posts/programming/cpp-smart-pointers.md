@@ -34,11 +34,20 @@ tags: c++
 - [Unique and shared ownership](https://akrzemi1.wordpress.com/2011/06/27/unique-ownership-shared-ownership/)
 - [single vs shared ownership meaning](http://stackoverflow.com/questions/13852710/single-vs-shared-ownership-meaning)
 - [C++ Core Guidelines: Ownership and Parameters](https://www.murrayc.com/permalink/2016/02/10/c-core-guidelines-ownership-and-parameters/)
+- [Smart Pointer Guidelines](https://www.chromium.org/developers/smart-pointer-guidelines)
+- [Ownership and Smart Pointers](https://google.github.io/styleguide/cppguide.html#Ownership_and_Smart_Pointers)
+- [Smart Pointers Gotchas](http://www.codeproject.com/Articles/547276/Smart-Pointers-Gotchas)
  
 
 > 2016-03-03 21:12:19
 
 # smart pointers in practice
+
+## use smart pointers as class members
+
+- [Using smart pointers for class members](http://stackoverflow.com/questions/15648844/using-smart-pointers-for-class-members)
+ 
+## passing smart pointers
 
 - [GotW #91: Smart Pointer Parameters](http://herbsutter.com/2013/05/30/gotw-91-smart-pointer-parameters/)
 - [GotW #91 Solution: Smart Pointer Parameters](http://herbsutter.com/2013/06/05/gotw-91-solution-smart-pointer-parameters/), Guidelines:
@@ -62,6 +71,3 @@ tags: c++
 		- Use a `const shared_ptr&` as a parameter only if you’re not sure whether or not you’ll take a copy and share ownership; otherwise use `widget*` instead (or if not nullable, a `widget&`).
 - [How do I pass smart pointers into functions? - SO](http://stackoverflow.com/questions/12519812/how-do-i-pass-smart-pointers-into-functions)
 - [C++中方法的参数和返回值、类成员变量什么时候该用原始指针什么时候该用智能指针？](https://www.zhihu.com/question/22821303)
-- [Smart Pointer Guidelines](https://www.chromium.org/developers/smart-pointer-guidelines)
-- [Ownership and Smart Pointers](https://google.github.io/styleguide/cppguide.html#Ownership_and_Smart_Pointers)
-- [Smart Pointers Gotchas](http://www.codeproject.com/Articles/547276/Smart-Pointers-Gotchas)
