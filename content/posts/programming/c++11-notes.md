@@ -12,3 +12,4 @@ tags: c++
 - [Elements of Modern C++ Style](http://herbsutter.com/elements-of-modern-c-style/)
 - [MIKE'S C++11 BLOG](https://mbevin.wordpress.com)
 - [C++ Rocks!](http://cpprocks.com/)
+- [Andrzej's C++ blog](https://akrzemi1.wordpress.com)
