@@ -55,12 +55,8 @@ tags: c++
 		- Passing `shared_ptr&` is useful for in/out shared_ptr manipulation.
 		- Use a non-const `shared_ptr&` parameter only to modify the `shared_ptr`.
 		- Use a `const shared_ptr&` as a parameter only if you’re not sure whether or not you’ll take a copy and share ownership; otherwise use `widget*` instead (or if not nullable, a `widget&`).
-- *Passing shared pointers as arguments* on SO
-	- http://stackoverflow.com/questions/10826541/passing-shared-pointers-as-arguments
-	- http://stackoverflow.com/questions/17368644/passing-smart-pointers-by-reference
-	- http://stackoverflow.com/questions/9155928/how-to-pass-smart-pointers-in-function
-	- http://stackoverflow.com/questions/12519812/how-do-i-pass-smart-pointers-into-functions
-	- [C++中方法的参数和返回值、类成员变量什么时候该用原始指针什么时候该用智能指针？](https://www.zhihu.com/question/22821303)
+- [How do I pass smart pointers into functions? - SO](http://stackoverflow.com/questions/12519812/how-do-i-pass-smart-pointers-into-functions)
+- [C++中方法的参数和返回值、类成员变量什么时候该用原始指针什么时候该用智能指针？](https://www.zhihu.com/question/22821303)
 - [Smart Pointer Guidelines](https://www.chromium.org/developers/smart-pointer-guidelines)
 - [Ownership and Smart Pointers](https://google.github.io/styleguide/cppguide.html#Ownership_and_Smart_Pointers)
 - [Smart Pointers Gotchas](http://www.codeproject.com/Articles/547276/Smart-Pointers-Gotchas)
