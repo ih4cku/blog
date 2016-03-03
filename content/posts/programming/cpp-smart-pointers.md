@@ -4,10 +4,10 @@ tags: c++
 
 > 2016-02-26 23:04:16
 
-# `shared_ptr`
+## `shared_ptr`
 - cycle problem
 
-# `weak_ptr`
+## `weak_ptr`
 - advantage over a regular raw pointer is that you can safely tell whether `weak_ptr` is dangling or not
 - just observe the object, doesn't affect the lifetime
 - can only be created from a `shared_ptr` or another `weak_ptr`
@@ -17,7 +17,7 @@ tags: c++
 - can only be set to empty state with `reset()` not by assigning to `nullptr`
 - can only be used as a `shared_ptr` by `lock()`
 
-# `unique_ptr`?
+## `unique_ptr`?
 - zero overhead
 - unique ownership
     + can be transferred around but only be owned by one owner at a time
@@ -27,12 +27,14 @@ tags: c++
         * as an `rvalue` with `std::move()` or a returned value
         * after transferring, the original owner becomes `nullptr`
 
-# references
+### references
 - [EECS 381 - Object-Oriented and Advanced Programming - Winter 2016](http://www.umich.edu/~eecs381/)
 - [Using C++11's Smart Pointers](http://www.umich.edu/~eecs381/handouts/C++11_smart_ptrs.pdf)
 - [C++11: unique_ptr](http://www.drdobbs.com/cpp/c11-uniqueptr/240002708)
 - [Unique and shared ownership](https://akrzemi1.wordpress.com/2011/06/27/unique-ownership-shared-ownership/)
 - [single vs shared ownership meaning](http://stackoverflow.com/questions/13852710/single-vs-shared-ownership-meaning)
+- [C++ Core Guidelines: Ownership and Parameters](https://www.murrayc.com/permalink/2016/02/10/c-core-guidelines-ownership-and-parameters/)
+ 
 
 > 2016-03-03 21:12:19
 
