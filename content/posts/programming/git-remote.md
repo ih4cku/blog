@@ -1,6 +1,14 @@
 title: git remote notes
 date: 2016-02-24 14:51:31
 tags: git
+status: draft
+
+# READ
+
+- http://stackoverflow.com/questions/292357/what-are-the-differences-between-git-pull-and-git-fetch
+- http://longair.net/blog/2009/04/16/git-fetch-and-merge/
+- https://www.atlassian.com/git/tutorials/syncing/git-push
+- http://stackoverflow.com/questions/3258243/check-if-pull-needed-in-git
 
 # questions
 
