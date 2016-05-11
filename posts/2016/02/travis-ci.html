@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ## for client-side less
+  <link rel="stylesheet/less" type="text/css" href="http://neurocoder.me/theme/css/style.less">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+  -->
+  <link rel="stylesheet" type="text/css" href="http://neurocoder.me/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="http://neurocoder.me/theme/css/pygments.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="neurocoder">
+  <meta name="description" content="Posts and writings by neurocoder">
+
+  <link href="http://neurocoder.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="neurocoder's notes Atom" />
+
+<meta name="keywords" content="travis">
+
+  <title>
+    neurocoder's notes
+&ndash; Travis-CI  </title>
+
+</head>
+
+<body>
+  <aside>
+    <div id="user_meta">
+      <a href="http://neurocoder.me">
+        <img src="/favicon.ico" alt="logo">
+      </a>
+      <h2><a href="http://neurocoder.me">neurocoder</a></h2>
+      <p>Record my thoughts</p>
+      <ul>
+        <li><a href="/categories.html">categories</a></li>
+        <li><a href="/tags.html">tags</a></li>
+        <li><a href="http://neurocoder.me/pages/about.html">about</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <p>
+      <a href="http://neurocoder.me">Index</a> &brvbar; <a href="http://neurocoder.me/posts/index.html">Archives</a>
+      &brvbar; <a href="http://neurocoder.me/feeds/all.atom.xml">Atom</a>
+      </p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h3><a href="http://neurocoder.me/posts/2016/02/travis-ci.html">Travis-CI</a></h3>
+  </div>
+  <div class="article_text">
+    <h1>Travis CI building lifecycle</h1>
+<ul>
+<li>install: install dependencies</li>
+<li>script: build script</li>
+</ul>
+<p>The complete process:</p>
+<ol>
+<li><code>before_install</code><ul>
+<li>install native dependencies with <code>sudo apt-get install</code></li>
+</ul>
+</li>
+<li><code>install</code></li>
+<li><code>before_script</code></li>
+<li><code>script</code></li>
+<li><code>after_success</code> or <code>after_failure</code></li>
+<li>optional <code>before_deploy</code></li>
+<li>optional <code>deploy</code></li>
+<li>optional <code>after_deploy</code></li>
+<li><code>after_script</code></li>
+</ol>
+<p>The build process is broken when any of the first 4 steps return a non-zero exit code.</p>
+<p>Skipping the install step: <code>install: true</code></p>
+<h1>Environment variables</h1>
+<ul>
+<li>Environment variables can be accessed from any stage of the building process.</li>
+<li>Can be set in <code>.travis.yml</code> or web UI</li>
+<li>Can be encrypted with <code>travis encrypt MY_SECURE_ENV=&lt;secure_value&gt;</code> and put into <code>.travis.yml</code> after <code>secure:</code></li>
+</ul>
+<h1>references</h1>
+<ul>
+<li><a href="https://docs.travis-ci.com/user/environment-variables/">Travis-CI Environment Variables</a></li>
+<li><a href="https://gist.github.com/domenic/ec8b0fc8ab45f39403dd">Auto-deploying built products to gh-pages with Travis</a></li>
+<li><a href="http://blog.mathieu-leplatre.info/publish-your-pelican-blog-on-github-pages-via-travis-ci.html">Publish your Pelican blog on Github pages via Travis-CI</a></li>
+<li><a href="https://farseerfc.me/travis-push-to-github-pages-blog.html">用 Travis-CI 生成 Github Pages 博客</a></li>
+</ul>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: 2016-02-27 Sat</p>
+    <p>Category: <a href="http://neurocoder.me/category/misc.html">misc</a>
+ &ndash; Tags:
+      <a href="http://neurocoder.me/tag/travis.html">travis</a>    </p>
+  </div>
+
+  <div id="article_comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_identifier = "posts/2016/02/travis-ci.html";
+        (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = '//neurocoder.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+    </script>
+  </div>
+
+</article>
+
+
+    <div id="ending_message">
+      <p>&copy; neurocoder. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
+    </div>
+  </main>
+</body>
+</html>

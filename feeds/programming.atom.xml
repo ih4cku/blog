@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>neurocoder's notes</title><link href="http://neurocoder.me/" rel="alternate"></link><link href="http://neurocoder.me/feeds/programming.atom.xml" rel="self"></link><id>http://neurocoder.me/</id><updated>2016-03-02T14:45:27+08:00</updated><entry><title>c++ sugars</title><link href="http://neurocoder.me/posts/2016/03/cpp-sugar.html" rel="alternate"></link><published>2016-03-02T14:45:27+08:00</published><author><name>neurocoder</name></author><id>tag:neurocoder.me,2016-03-02:posts/2016/03/cpp-sugar.html</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/grapeot/cppsugar"&gt;cppsugar @grapeot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/meierue/RNNLIB/blob/master/src/Helpers.hpp"&gt;rnnlib/helpers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="c++"></category></entry><entry><title>CS courses</title><link href="http://neurocoder.me/posts/2016/03/cs-courses.html" rel="alternate"></link><published>2016-03-01T21:22:42+08:00</published><author><name>neurocoder</name></author><id>tag:neurocoder.me,2016-03-01:posts/2016/03/cs-courses.html</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.umich.edu/~eecs381/"&gt;EECS 381 - Object-Oriented and Advanced Programming - Winter 2016&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://web.stanford.edu/class/cs106l/"&gt;Stanford cs106L: Standard C++&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://web.stanford.edu/class/cs106b/"&gt;Stanford CS106B: Programming Abstractions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://web.stanford.edu/class/cs106x/"&gt;Stanford CS106X: Programming Abstractions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="course"></category></entry><entry><title>git search in commit history</title><link href="http://neurocoder.me/posts/2016/02/git-search.html" rel="alternate"></link><published>2016-02-29T02:14:52+08:00</published><author><name>neurocoder</name></author><id>tag:neurocoder.me,2016-02-29:posts/2016/02/git-search.html</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/8435343/retrieve-the-commit-log-for-a-specific-line-in-a-file"&gt;Retrieve the commit log for a specific line in a file?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://git-scm.com/book/en/v2/Git-Tools-Searching"&gt;7.5 Git Tools: Searching - Pro Git&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="git"></category></entry><entry><title>modern c++ references</title><link href="http://neurocoder.me/posts/2016/02/modern-cpp-refs.html" rel="alternate"></link><published>2016-02-29T00:17:38+08:00</published><author><name>neurocoder</name></author><id>tag:neurocoder.me,2016-02-29:posts/2016/02/modern-cpp-refs.html</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://herbsutter.com/elements-of-modern-c-style/"&gt;Elements of Modern C++ Style&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management"&gt;R: Resource management - C++ Core Guidelines&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://mbevin.wordpress.com"&gt;MIKE'S C++11 BLOG&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://cpprocks.com/"&gt;C++ Rocks!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://akrzemi1.wordpress.com"&gt;Andrzej's C++ blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="c++"></category></entry><entry><title>smart pointers</title><link href="http://neurocoder.me/posts/2016/02/cpp-smart-pointers.html" rel="alternate"></link><published>2016-02-26T23:04:16+08:00</published><author><name>neurocoder</name></author><id>tag:neurocoder.me,2016-02-26:posts/2016/02/cpp-smart-pointers.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;2016-02-26 23:04:16&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;&lt;code&gt;shared_ptr&lt;/code&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;cycle problem&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;code&gt;weak_ptr&lt;/code&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;advantage over a regular raw pointer is that you can safely tell whether &lt;code&gt;weak_ptr&lt;/code&gt; is dangling or not&lt;/li&gt;
+&lt;li&gt;just observe the object, doesn't affect the lifetime&lt;/li&gt;
+&lt;li&gt;can only be created from a &lt;code&gt;shared_ptr&lt;/code&gt; or another &lt;code&gt;weak_ptr&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;can't dereference &lt;/li&gt;
+&lt;li&gt;neither &lt;code&gt;*&lt;/code&gt; nor &lt;code&gt;-&amp;gt;&lt;/code&gt; is defined&lt;/li&gt;
+&lt;li&gt;can't access the raw pointer, no &lt;code&gt;get()&lt;/code&gt; function&lt;/li&gt;
+&lt;li&gt;can only be set to empty state with &lt;code&gt;reset()&lt;/code&gt; not by assigning to &lt;code&gt;nullptr&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;can only be used as a &lt;code&gt;shared_ptr&lt;/code&gt; by &lt;code&gt;lock()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;code&gt;unique_ptr&lt;/code&gt;?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;zero overhead&lt;/li&gt;
+&lt;li&gt;unique ownership&lt;ul&gt;
+&lt;li&gt;can be transferred around but only be owned by one owner at a time&lt;/li&gt;
+&lt;li&gt;the unique ownership is enforced by disallowing copy and assignment&lt;/li&gt;
+&lt;li&gt;if used as function argument, must by reference&lt;/li&gt;
+&lt;li&gt;ownership can only be transfered with move semantics &lt;ul&gt;
+&lt;li&gt;as an &lt;code&gt;rvalue&lt;/code&gt; with &lt;code&gt;std::move()&lt;/code&gt; or a returned value&lt;/li&gt;
+&lt;li&gt;after transferring, the original owner becomes &lt;code&gt;nullptr&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;references&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management"&gt;R: Resource management - C++ Core Guidelines&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.umich.edu/~eecs381/handouts/C++11_smart_ptrs.pdf"&gt;Using C++11's Smart Pointers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.drdobbs.com/cpp/c11-uniqueptr/240002708"&gt;C++11: unique_ptr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://akrzemi1.wordpress.com/2011/06/27/unique-ownership-shared-ownership/"&gt;Unique and shared ownership&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/13852710/single-vs-shared-ownership-meaning"&gt;single vs shared ownership meaning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.murrayc.com/permalink/2016/02/10/c-core-guidelines-ownership-and-parameters/"&gt;C++ Core Guidelines: Ownership and Parameters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.chromium.org/developers/smart-pointer-guidelines"&gt;Smart Pointer Guidelines&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://google.github.io/styleguide/cppguide.html#Ownership_and_Smart_Pointers"&gt;Ownership and Smart Pointers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.codeproject.com/Articles/547276/Smart-Pointers-Gotchas"&gt;Smart Pointers Gotchas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2016-03-03 21:12:19&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;smart pointers in practice&lt;/h1&gt;
+&lt;h2&gt;use smart pointers as class members&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/15648844/using-smart-pointers-for-class-members"&gt;Using smart pointers for class members&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;passing smart pointers&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://herbsutter.com/2013/05/30/gotw-91-smart-pointer-parameters/"&gt;GotW #91: Smart Pointer Parameters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://herbsutter.com/2013/06/05/gotw-91-solution-smart-pointer-parameters/"&gt;GotW #91 Solution: Smart Pointer Parameters&lt;/a&gt;, Guidelines:&lt;ul&gt;
+&lt;li&gt;Don’t pass a smart pointer as a function parameter unless you want to use or manipulate the smart pointer itself, such as to share or transfer ownership.&lt;/li&gt;
+&lt;li&gt;Prefer passing objects by value, &lt;code&gt;*&lt;/code&gt;, or &lt;code&gt;&amp;amp;&lt;/code&gt;, not by smart pointer.&lt;ul&gt;
+&lt;li&gt;Non-owning raw &lt;code&gt;*&lt;/code&gt; pointers and &lt;code&gt;&amp;amp;&lt;/code&gt; references are okay to observe an object whose lifetime we know exceeds that of the pointer or reference, which is usually true for function parameters. &lt;/li&gt;
+&lt;li&gt;As usual, use a &lt;code&gt;*&lt;/code&gt; if you need to express null, otherwise prefer to use a &lt;code&gt;&amp;amp;&lt;/code&gt;; and if the object is input-only, write &lt;code&gt;const widget*&lt;/code&gt; or &lt;code&gt;const widget&amp;amp;&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;void f( unique_ptr&amp;lt;widget&amp;gt; )&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;Express a “sink” function using a by-value &lt;code&gt;unique_ptr&lt;/code&gt; parameter.&lt;/li&gt;
+&lt;li&gt;Superior to raw pointer because it documents the &lt;strong&gt;semantics&lt;/strong&gt; in code.&lt;/li&gt;
+&lt;li&gt;Because the callee will now own the object, usually there should be no &lt;code&gt;const&lt;/code&gt; on the parameter because the const should be irrelevant.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;void f( unique_ptr&amp;lt;widget&amp;gt;&amp;amp; )&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;Use a non-const &lt;code&gt;unique_ptr&amp;amp;&lt;/code&gt; parameter only to modify the &lt;code&gt;unique_ptr&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Don’t use a const &lt;code&gt;unique_ptr&amp;amp;&lt;/code&gt; as a parameter; use &lt;code&gt;widget*&lt;/code&gt; instead.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;void f( shared_ptr&amp;lt;widget&amp;gt; )&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;Passing &lt;code&gt;shared_ptr&lt;/code&gt; by value implies taking shared ownership.&lt;/li&gt;
+&lt;li&gt;Express that a function will store and share ownership of a heap object using a by-value &lt;code&gt;shared_ptr&lt;/code&gt; parameter.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;void f( shared_ptr&amp;lt;widget&amp;gt;&amp;amp; )&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;Passing &lt;code&gt;shared_ptr&amp;amp;&lt;/code&gt; is useful for in/out shared_ptr manipulation.&lt;/li&gt;
+&lt;li&gt;Use a non-const &lt;code&gt;shared_ptr&amp;amp;&lt;/code&gt; parameter only to modify the &lt;code&gt;shared_ptr&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Use a &lt;code&gt;const shared_ptr&amp;amp;&lt;/code&gt; as a parameter only if you’re not sure whether or not you’ll take a copy and share ownership; otherwise use &lt;code&gt;widget*&lt;/code&gt; instead (or if not nullable, a &lt;code&gt;widget&amp;amp;&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/12519812/how-do-i-pass-smart-pointers-into-functions"&gt;How do I pass smart pointers into functions? - SO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.zhihu.com/question/22821303"&gt;C++中方法的参数和返回值、类成员变量什么时候该用原始指针什么时候该用智能指针？&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="c++"></category></entry><entry><title>git submodule</title><link href="http://neurocoder.me/posts/2016/02/git-submodule.html" rel="alternate"></link><published>2016-02-25T14:57:08+08:00</published><author><name>neurocoder</name></author><id>tag:neurocoder.me,2016-02-25:posts/2016/02/git-submodule.html</id><summary type="html">&lt;p&gt;Using third-party libraries is very common in daily development.
+Git submodule is cool to make the library related with its original remote repo.&lt;/p&gt;
+&lt;p&gt;When cloning or pulling a repo containing submodules, these will not be checkout out by default (except for using &lt;code&gt;--recursive&lt;/code&gt; option). The &lt;code&gt;init&lt;/code&gt; and &lt;code&gt;update&lt;/code&gt; command will maintain submodules with appropriate revision.&lt;/p&gt;
+&lt;p&gt;The main repo record a &lt;code&gt;gitlink&lt;/code&gt; tree entry in the commit and use that to indicate the revision record of the submodules when checking out.&lt;/p&gt;
+&lt;p&gt;A record file named &lt;code&gt;.gitmodules&lt;/code&gt; is saved at the root of the source tree assigning a logical name of the submodule and the URL the submodule shall be cloned from.&lt;/p&gt;</summary><category term="git"></category></entry><entry><title>git index meet merging conflict</title><link href="http://neurocoder.me/posts/2016/02/git-index-conflict.html" rel="alternate"></link><published>2016-02-25T12:31:06+08:00</published><author><name>neurocoder</name></author><id>tag:neurocoder.me,2016-02-25:posts/2016/02/git-index-conflict.html</id><summary type="html">&lt;p&gt;The content of &lt;code&gt;index&lt;/code&gt; when merging conflict happened:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ git ls-files -s
+&lt;span class="m"&gt;100644&lt;/span&gt; ce013625030ba8dba906f756967f9e9ca394464a &lt;span class="m"&gt;1&lt;/span&gt;       a.txt
+&lt;span class="m"&gt;100644&lt;/span&gt; 94954abda49de8615a048f8d2e64b5de848e27a1 &lt;span class="m"&gt;2&lt;/span&gt;       a.txt
+&lt;span class="m"&gt;100644&lt;/span&gt; e9f71396d33d1553ccd46186d4c11363b6841f6f &lt;span class="m"&gt;3&lt;/span&gt;       a.txt
+
+$ git cat-file -p ce013625030ba8dba906f756967f9e9ca394464a &lt;span class="c1"&gt;# :1:a.txt&lt;/span&gt;
+hello
+
+$ git cat-file -p 94954abda49de8615a048f8d2e64b5de848e27a1 &lt;span class="c1"&gt;# :2:a.txt&lt;/span&gt;
+hello
+world
+
+$ git cat-file -p e9f71396d33d1553ccd46186d4c11363b6841f6f &lt;span class="c1"&gt;# :3:a.txt&lt;/span&gt;
+hello
+neurocoder
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After solving the conflict, the file is added to &lt;code&gt;:0:a.txt&lt;/code&gt; in &lt;code&gt;index&lt;/code&gt;.&lt;/p&gt;</summary><category term="git"></category></entry><entry><title>Rule of Three (or The Big Three)</title><link href="http://neurocoder.me/posts/2016/02/rule-of-three.html" rel="alternate"></link><published>2016-02-23T13:54:59+08:00</published><author><name>neurocoder</name></author><id>tag:neurocoder.me,2016-02-23:posts/2016/02/rule-of-three.html</id><summary type="html">&lt;p&gt;The term The Rule of Three was &lt;a href="https://blog.feabhas.com/2014/12/the-rule-of-the-big-three-and-a-half-resource-management-in-c"&gt;coined&lt;/a&gt; by Marshall Cline in 1991.&lt;/p&gt;
+&lt;h1&gt;References&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)"&gt;Rule of three (C++ programming)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.florianwolters.de/educational/2015/01/31/The_Rule_of_Zero/"&gt;The Rule of Zero&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.drdobbs.com/c-made-easier-the-rule-of-three/184401400"&gt;C++ Made Easier: The Rule of Three&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/4172722/what-is-the-rule-of-three"&gt;What is The Rule of Three?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="c++"></category></entry><entry><title>PIMPL</title><link href="http://neurocoder.me/posts/2016/02/pimpl.html" rel="alternate"></link><published>2016-02-23T13:54:54+08:00</published><author><name>neurocoder</name></author><id>tag:neurocoder.me,2016-02-23:posts/2016/02/pimpl.html</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://oliora.github.io/2015/12/29/pimpl-and-rule-of-zero.html"&gt;PIMPL, Rule of Zero and Scott Meyers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="c++"></category></entry></feed>

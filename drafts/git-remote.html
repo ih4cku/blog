@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ## for client-side less
+  <link rel="stylesheet/less" type="text/css" href="http://neurocoder.me/theme/css/style.less">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+  -->
+  <link rel="stylesheet" type="text/css" href="http://neurocoder.me/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="http://neurocoder.me/theme/css/pygments.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="neurocoder">
+  <meta name="description" content="Posts and writings by neurocoder">
+
+  <link href="http://neurocoder.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="neurocoder's notes Atom" />
+
+<meta name="keywords" content="git">
+
+  <title>
+    neurocoder's notes
+&ndash; git remote notes  </title>
+
+</head>
+
+<body>
+  <aside>
+    <div id="user_meta">
+      <a href="http://neurocoder.me">
+        <img src="/favicon.ico" alt="logo">
+      </a>
+      <h2><a href="http://neurocoder.me">neurocoder</a></h2>
+      <p>Record my thoughts</p>
+      <ul>
+        <li><a href="/categories.html">categories</a></li>
+        <li><a href="/tags.html">tags</a></li>
+        <li><a href="http://neurocoder.me/pages/about.html">about</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <p>
+      <a href="http://neurocoder.me">Index</a> &brvbar; <a href="http://neurocoder.me/posts/index.html">Archives</a>
+      &brvbar; <a href="http://neurocoder.me/feeds/all.atom.xml">Atom</a>
+      </p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h3><a href="http://neurocoder.me/drafts/git-remote.html">git remote notes</a></h3>
+  </div>
+  <div class="article_text">
+    <h1>READ</h1>
+<ul>
+<li>http://stackoverflow.com/questions/292357/what-are-the-differences-between-git-pull-and-git-fetch</li>
+<li>http://longair.net/blog/2009/04/16/git-fetch-and-merge/</li>
+<li>https://www.atlassian.com/git/tutorials/syncing/git-push</li>
+<li>http://stackoverflow.com/questions/3258243/check-if-pull-needed-in-git</li>
+</ul>
+<h1>questions</h1>
+<ul>
+<li>Q: What is a <code>local tracking branch</code>?<ul>
+<li>A: When merging new commits of a <code>remote tracking branch</code>, it merges to the <code>local tracking branch</code>.</li>
+</ul>
+</li>
+<li>Q: Which branches does <code>git fetch</code> fetch?</li>
+<li>Q: How is file system <code>rm</code> different with <code>git rm</code>?<ul>
+<li><code>git rm</code> removes a file from both the repo and the working directory</li>
+</ul>
+</li>
+<li>Q: How is the order of <em>parent commit</em> determined?</li>
+<li>Q: When merge conflict happened, how does git record I am merging?</li>
+</ul>
+<h1>relative git commit names</h1>
+<ul>
+<li><code>^</code> means a commit ahead</li>
+<li><code>^2</code> means the 2nd parent commit of the commit ahead</li>
+</ul>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: 2016-02-24 Wed</p>
+    <p>Category: <a href="http://neurocoder.me/category/programming.html">programming</a>
+ &ndash; Tags:
+      <a href="http://neurocoder.me/tag/git.html">git</a>    </p>
+  </div>
+
+  <div id="article_comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_identifier = "drafts/git-remote.html";
+        (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = '//neurocoder.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+    </script>
+  </div>
+
+</article>
+
+
+    <div id="ending_message">
+      <p>&copy; neurocoder. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
+    </div>
+  </main>
+</body>
+</html>

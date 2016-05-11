@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>neurocoder's notes</title><link href="http://neurocoder.me/" rel="alternate"></link><link href="http://neurocoder.me/feeds/deep-learning.atom.xml" rel="self"></link><id>http://neurocoder.me/</id><updated>2016-04-01T23:39:57+08:00</updated><entry><title>RNN must read</title><link href="http://neurocoder.me/posts/2016/04/rnn-must-read.html" rel="alternate"></link><published>2016-04-01T23:39:57+08:00</published><author><name>neurocoder</name></author><id>tag:neurocoder.me,2016-04-01:posts/2016/04/rnn-must-read.html</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;Bengio, Yoshua, Nicolas Boulanger-Lewandowski, and Razvan Pascanu. "Advances in optimizing recurrent networks.", ICASSP, 2013&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="rnn"></category></entry><entry><title>caffe helpers</title><link href="http://neurocoder.me/posts/2016/03/caffe-helpers.html" rel="alternate"></link><published>2016-03-05T10:51:28+08:00</published><author><name>neurocoder</name></author><id>tag:neurocoder.me,2016-03-05:posts/2016/03/caffe-helpers.html</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kashefy/caffe_sandbox"&gt;caffe_sandbox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ShaharKatz/Caffe-Data-Augmentation"&gt;Caffe Data Augmentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/fastturtle/caffe-visualize"&gt;caffe-visualize&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/tnarihi/tnarihi-caffe-helper"&gt;BVLC/caffe helper tools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/shicai/Caffe_Manual"&gt;Caffe使用教程 by Shicai Yang&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="caffe"></category></entry></feed>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ## for client-side less
+  <link rel="stylesheet/less" type="text/css" href="http://neurocoder.me/theme/css/style.less">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+  -->
+  <link rel="stylesheet" type="text/css" href="http://neurocoder.me/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="http://neurocoder.me/theme/css/pygments.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="neurocoder">
+  <meta name="description" content="Posts and writings by neurocoder">
+
+  <link href="http://neurocoder.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="neurocoder's notes Atom" />
+
+
+  <title>
+    neurocoder's notes
+  </title>
+
+</head>
+
+<body>
+  <aside>
+    <div id="user_meta">
+      <a href="http://neurocoder.me">
+        <img src="/favicon.ico" alt="logo">
+      </a>
+      <h2><a href="http://neurocoder.me">neurocoder</a></h2>
+      <p>Record my thoughts</p>
+      <ul>
+        <li><a href="/categories.html">categories</a></li>
+        <li><a href="/tags.html">tags</a></li>
+        <li><a href="http://neurocoder.me/pages/about.html">about</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <p>
+      <a href="http://neurocoder.me">Index</a> &brvbar; <a href="http://neurocoder.me/posts/index.html">Archives</a>
+      &brvbar; <a href="http://neurocoder.me/feeds/all.atom.xml">Atom</a>
+      </p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h3><a href="http://neurocoder.me/posts/2016/02/git-submodule.html">git submodule</a></h3>
+  </div>
+  <div class="article_text">
+    <p>Using third-party libraries is very common in daily development.
+Git submodule is cool to make the library related with its original remote repo.</p>
+<p>When cloning or pulling a repo containing submodules, these will not be checkout out by default (except for using <code>--recursive</code> option). The <code>init</code> and <code>update</code> command will ...</p>
+  </div>
+</article>
+<hr />
+<article>
+  <div class="article_title">
+    <h3><a href="http://neurocoder.me/posts/2016/02/git-index-conflict.html">git index meet merging conflict</a></h3>
+  </div>
+  <div class="article_text">
+    <p>The content of <code>index</code> when merging conflict happened:</p>
+<div class="highlight"><pre><span></span>$ git ls-files -s
+<span class="m">100644</span> ce013625030ba8dba906f756967f9e9ca394464a <span class="m">1</span>       a.txt
+<span class="m">100644</span> 94954abda49de8615a048f8d2e64b5de848e27a1 <span class="m">2</span>       a.txt
+<span class="m">100644</span> e9f71396d33d1553ccd46186d4c11363b6841f6f <span class="m">3</span>       a.txt
+
+$ git cat-file -p ce013625030ba8dba906f756967f9e9ca394464a <span class="c1"># :1:a.txt</span>
+hello
+
+$ git cat-file -p 94954abda49de8615a048f8d2e64b5de848e27a1 <span class="c1"># :2:a.txt</span>
+hello
+world
+
+$ git cat-file -p e9f71396d33d1553ccd46186d4c11363b6841f6f <span class="c1"># :3:a.txt ...</span></pre></div>
+  </div>
+</article>
+<hr />
+<article>
+  <div class="article_title">
+    <h3><a href="http://neurocoder.me/posts/2016/02/pelican.html">Blogging with Pelican</a></h3>
+  </div>
+  <div class="article_text">
+    <p>I've red the whole document of Pelican and now I'm aware of the usage and mechanism of Pelican.</p>
+<p>Next step, I will add plug-ins and use a more good looking theme for my blog.</p>
+  </div>
+</article>
+<hr />
+<article>
+  <div class="article_title">
+    <h3><a href="http://neurocoder.me/posts/2016/02/rule-of-three.html">Rule of Three (or The Big Three)</a></h3>
+  </div>
+  <div class="article_text">
+    <p>The term The Rule of Three was <a href="https://blog.feabhas.com/2014/12/the-rule-of-the-big-three-and-a-half-resource-management-in-c">coined</a> by Marshall Cline in 1991.</p>
+<h1>References</h1>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)">Rule of three (C++ programming)</a></li>
+<li><a href="http://blog.florianwolters.de/educational/2015/01/31/The_Rule_of_Zero/">The Rule of Zero</a></li>
+<li><a href="http://www.drdobbs.com/c-made-easier-the-rule-of-three/184401400">C++ Made Easier: The Rule of Three</a></li>
+<li><a href="http://stackoverflow.com/questions/4172722/what-is-the-rule-of-three">What is The Rule of Three?</a></li>
+</ul>
+  </div>
+</article>
+<hr />
+<article>
+  <div class="article_title">
+    <h3><a href="http://neurocoder.me/posts/2016/02/pimpl.html">PIMPL</a></h3>
+  </div>
+  <div class="article_text">
+    <ul>
+<li><a href="http://oliora.github.io/2015/12/29/pimpl-and-rule-of-zero.html">PIMPL, Rule of Zero and Scott Meyers</a></li>
+</ul>
+  </div>
+</article>
+
+<footer>
+<div id="paginator">
+
+<a href="http://neurocoder.me/index.html" class="button_accent">Newer Posts &rarr;</a>
+</div>
+</footer>
+
+    <div id="ending_message">
+      <p>&copy; neurocoder. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
+    </div>
+  </main>
+</body>
+</html>

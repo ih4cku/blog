@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>neurocoder's notes</title><link href="http://neurocoder.me/" rel="alternate"></link><link href="http://neurocoder.me/feeds/academic.atom.xml" rel="self"></link><id>http://neurocoder.me/</id><updated>2016-05-11T07:56:23+08:00</updated><entry><title>Symmetry breaking</title><link href="http://neurocoder.me/posts/2016/05/symmetry-breaking.html" rel="alternate"></link><published>2016-05-11T07:56:23+08:00</published><author><name>neurocoder</name></author><id>tag:neurocoder.me,2016-05-11:posts/2016/05/symmetry-breaking.html</id><summary type="html">&lt;h1&gt;Symmetry breaking&lt;/h1&gt;
+&lt;p&gt;Saw this word in many deep learning papers, and find it's a general rule for developing better machine learning algorithms. ( see &lt;a href="http://hunch.net/?p=632"&gt;Asymmophobia&lt;/a&gt;, a great post by John Langford)&lt;/p&gt;
+&lt;h2&gt;Why symmetry is bad?&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If all weights start with equal values and if the solution requires that unequal weights be developed, the system can never learn.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;see &lt;a href="http://stats.stackexchange.com/a/45092/12667"&gt;this answer&lt;/a&gt;, &lt;a href="http://cs231n.github.io/neural-networks-2/"&gt;cs231n lecture&lt;/a&gt; and &lt;a href="http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf"&gt;Hinton's lecture, p10&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Empirically, breaking symmetry well seems to yield great algorithms.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;As summarized in the post, &lt;strong&gt;randomization&lt;/strong&gt; in neural networks is a method of symmetry breaking.&lt;/p&gt;</summary><category term="machine learning"></category></entry></feed>
